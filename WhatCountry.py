@@ -8,10 +8,6 @@ data = dataset.values
 X = data[1:, 2:]
 # Y contains all countries
 Y = data[1:, 0]
-# Note: When writing this initially, I used an 80-20 split for training and testing.
-#       However, because this data is a bunch of rankings with each country posted once,
-#       it wouldn't make sense to continue that path as it can't test using unknown countries
-
 # Logistic regression for the model. Liblinear for one vs rest data
 model = LR(solver='liblinear', multi_class='auto')
 # Train the model
